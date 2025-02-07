@@ -1,17 +1,21 @@
 // Your Firebase config (replace with your details)
+// Import and Initialize Firebase
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBNljvAvyNF2wVIhK2qOXsTl-qlF1rJ-wA",
+  authDomain: "groupchat-9a7fe.firebaseapp.com",
+  databaseURL: "https://groupchat-9a7fe-default-rtdb.firebaseio.com",
+  projectId: "groupchat-9a7fe",
+  storageBucket: "groupchat-9a7fe.firebasestorage.app",
+  messagingSenderId: "418527928620",
+  appId: "1:418527928620:web:ad7bcf0a7a2f9fdf784c89",
+  measurementId: "G-T7S6LRQ32T"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
 const db = firebase.firestore();
+const auth = firebase.auth();
+
 
 // Authentication functions
 function signUp() {
