@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Chat App</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-    <script defer src="script.js"></script>
+    <title>Group Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+        }
+        input, button {
+            margin: 5px;
+            padding: 10px;
+        }
+        #chat-box {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid white;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            text-align: left;
+            background: #222;
+        }
+    </style>
 </head>
 <body>
-    <div id="chat-container">
-        <h1>Chat App</h1>
-        <div id="auth-section">
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="signUp()">Sign Up</button>
-            <button onclick="logIn()">Log In</button>
-            <button onclick="logOut()">Log Out</button>
-        </div>
-        <div id="chat-section" style="display: none;">
-            <div id="messages"></div>
-            <input type="text" id="message-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
+    <h1>Group Chat</h1>
+    
+    <div>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="signup">Sign Up</button>
+        <button id="login">Log In</button>
+        <button id="logout">Log Out</button>
     </div>
+
+    <p id="status">Not logged in.</p>
+
+    <div id="chat-box"></div>
+    <input type="text" id="message" placeholder="Type a message...">
+    <button id="send">Send</button>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
